@@ -24,16 +24,27 @@ In MA crossover example, an entry will be taken on a price move above/below the 
 Calculate the Trading System Performance based on the trades generated. 
 
 To include-
+
 a. Total profit, Profitability
+
 b. Profit factor (Win/Loss ratio), Payout ratio (Avg. Win/Avg. Loss), Trade Expectancy
+
 c. Total trades
+
 d. Winning Percentage
+
 e. Average trade
+
 f. Maximum favorable excursion (MFE), Maximum adverse excursion (MAE)
+
 g. Maximum Drawdown, Maximum Time to recovery
+
 h. Sharpe ratio
+
 i. Winning trades count, Average Winner, Max. Winner, Min. Winner
+
 j. Losing trades count, Average Loser, Max. Loser, Min Loser
+
 k. Maximum Winning streak, Maximum Losing streak
 
 **Step 5: Optimization**
