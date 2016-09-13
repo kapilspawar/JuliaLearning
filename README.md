@@ -4,16 +4,16 @@ Learning to write a simple trading strategy in Julia using Moving Averages Cross
 
 Price/volume & bid/offer quotes data is usually made available by feed providers authorized by exchanges. At the most granular level (level 2 & level 3) bid/ask quotes (Order flow) and tick by tick price/volume information (Price Action) is  disseminated. All trading strategies rely on order flow and/or price action information to execute trades. A trading system may use this information direcly or via technical indicators that are derived from order flow/price action to determine enteries, exits, position size et al.
 
-In some cases the exchanges may publish price/volume information directly for the benefit of investors. E.g. [NSE Nifty Index Data] (https://www.nseindia.com/products/content/equities/indices/historical_index_data.htm). I have downloaded the daily NSE Nifty Price/Volume data and stored [here] (https://raw.githubusercontent.com/kapilspawar/JuliaLearning/master/data/Nifty.csv)
+In some cases the exchanges may publish price/volume information directly for the benefit of investors. E.g. [NSE Nifty Index Data] (https://www.nseindia.com/products/content/equities/indices/historical_index_data.htm). I have downloaded the daily NSE Nifty Price/Volume data and stored [here] (https://raw.githubusercontent.com/kapilspawar/JuliaLearning/master/data/Nifty.csv).
 
-**Step 2: Visualization of the price action with indicators**
+**Step 2: Visualize the price action with indicators**
 
 Plot Nifty Closing prices along with 20d and 50d SMA.
 ![Nifty Spot](https://github.com/kapilspawar/JuliaLearning/blob/master/images/nifty_1000d.png?raw=true "Nifty Spot")
 
 **Step 3: Trade Generation**
 
-Generate trades based on the entries/exits provided by one or more technical indicators. Provide for transaction costs viz. slippage, brokerage, commissions, fees, taxes etc.
+Generate trades based on the entries/exits provided by the trading system based on one or more technical indicators. Provide for transaction costs viz. slippage, brokerage, commissions, fees, taxes etc.
 
 In MA crossover example, an entry will be taken on a price move above/below the close after the MA Crossover and exit on a high/low after MA crossover in the opposite direction. E.g. Add long position when faster MA crosses the slower MA on the upside and price closes above a previous high. And exit once the faster MA crosses the slower MA on the downside and price closes below a previous low. Also use a stop and reverse strategy. That means short positions will be initiated on closing longs and vice versa.
 
