@@ -38,10 +38,14 @@ k. Maximum Winning streak, Maximum Losing streak
 
 **Step 5: Optimization**
 
-Optimize input parameters that make up the technical indicators and analyze trading system performance. Use 3d plotting for visualization.
+Optimize the input parameters that make up the technical indicators and analyze trading system performance. Use 3d plotting for visualization. This may be most computing intensive part of system building depending on the data size - periodicity of data (tickdata/1m data etc.), period of data (tens of years) and the permutations & combinations of the parameters that need to be optimized.
 
 In MA crossover example, optimize based on the duration of fast and slow moving averages.
 
 **Step 6: Monte Carlo Simulation**
 
 Using randomized simulated trade sequences to evaluate statistical properties of a trading system. Determine worst case losing streaks, drawdowns etc.
+
+**Step 7: Go live**
+
+It should be possible to implement the tested and optimized trading strategy to be put in production with zero code change & minimal effort.
