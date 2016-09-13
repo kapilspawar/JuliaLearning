@@ -1,5 +1,7 @@
 # JuliaLearning
 Learning to write a simple trading strategy in Julia using Moving Averages Crossover. Ideally the MA Crossover itself should be one of the many indicators that can be provided out-of-the-box. Strategies can then be written on any of the published indicators.
+
+
 **Step 1: Access price/volume data from a reliable source/data provider**
 
 Price/volume & bid/offer quotes data is usually made available by feed providers authorized by exchanges. At the most granular level (level 2 & level 3) bid/ask quotes (Order flow) and tick by tick price/volume information (Price Action) is  disseminated. All trading strategies rely on order flow and/or price action information to execute trades. A trading system may use this information direcly or via technical indicators that are derived from order flow/price action to determine enteries, exits, position size et al.
