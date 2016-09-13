@@ -4,7 +4,7 @@ Learning to write a simple trading strategy in Julia using Moving Averages Cross
 
 Price/volume & bid/offer quotes data is usually made available by feed providers authorized by exchanges. At the most granular level (level 2 & level 3) bid/ask quotes (Order flow) and tick by tick price/volume information (Price Action) is  disseminated. All trading strategies rely on order flow and/or price action information to execute trades. A trading system may use this information direcly or via technical indicators that are derived from order flow/price action to determine enteries, exits, position size et al.
 
-In some cases the exchanges may publish price/volume information directly for the benefit of investors. E.g. [NSE Nifty Index Data] (https://www.nseindia.com/products/content/equities/indices/historical_index_data.htm). I have downloaded the daily NSE Nifty Price/Volume data and stored [here] (https://raw.githubusercontent.com/kapilspawar/JuliaLearning/master/data/Nifty.csv).
+In some cases the exchanges may publish price/volume information directly for the benefit of investors. E.g. [NSE Nifty Index Data] (https://www.nseindia.com/products/content/equities/indices/historical_index_data.htm). I have downloaded the daily NSE Nifty Price/Volume data since 1-Jan-1997 and archived [here] (https://raw.githubusercontent.com/kapilspawar/JuliaLearning/master/data/Nifty.csv).
 
 **Step 2: Visualize the price action with indicators**
 
