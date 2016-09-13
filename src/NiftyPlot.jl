@@ -29,6 +29,7 @@ y2 = df[:Turnover_Rs_Cr_]
 mafast = ma(convert(Array, y1), fastmabars)
 maslow = ma(convert(Array, y1), slowmabars)
 
+fig = figure("Nifty",figsize=(12,8))
 ax1 = gca()
 grid("on")
 title("Nifty")
@@ -46,3 +47,5 @@ ax2[:set_ylim]([0, maximum(y2) * 5]) # Keep Volume bars to be no more than 20% o
 ylabel("Volume")
 c = bar(dt, y2, color="black", align="center", label="Volume")
 xlabel("Date")
+
+savefig("nifty_1000d.png")
