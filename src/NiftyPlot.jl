@@ -23,11 +23,11 @@ if r.response.status / 100 != 2
 end
 df0 = readtable(r, separator = ',', header = true)
 df = tail(df0, 1000) # Restrict data to last 1000 days or approximately 4 years
-x = df[:Date]
-y1 = df[:Close]
-y2 = df[:Turnover_Rs_Cr_]
-mafast = ma(convert(Array, y1), fastmabars)
-maslow = ma(convert(Array, y1), slowmabars)
+date = df[:Date]
+close = df[:Close]
+volume = df[:Turnover_Rs_Cr_]
+mafast = ma(convert(Array, close), fastmabars)
+maslow = ma(convert(Array, close), slowmabars)
 
 fig = figure("Nifty",figsize=(12,8))
 ax1 = gca()
@@ -35,17 +35,17 @@ grid("on")
 title("Nifty")
 ylabel("Close")
 
-dt = DateTime(x, "dd-uuu-yy")
-p = plot_date(dt, y1, color="blue", linestyle="-", marker="None", label="Close")
+dt = DateTime(date, "dd-uuu-yy")
+p = plot_date(dt, close, color="blue", linestyle="-", marker="None", label="Close")
 
 pmafast = plot_date(dt, mafast, color="green", linestyle="-", marker="None", label=string(fastmabars, "d MA"))
 pmaslow = plot_date(dt, maslow, color="red", linestyle="-", marker="None", label=string(slowmabars, "d MA"))
 legend(handles=[p; pmafast; pmaslow], loc="upper left")
 
 ax2 = ax1[:twinx]() # Create another axis on top of the current axis
-ax2[:set_ylim]([0, maximum(y2) * 5]) # Keep Volume bars to be no more than 20% of the total chart height
+ax2[:set_ylim]([0, maximum(volume) * 5]) # Keep Volume bars to be no more than 20% of the total chart height
 ylabel("Volume")
-c = bar(dt, y2, color="black", align="center", label="Volume")
+bar(dt, volume, color="black", align="center", label="Volume")
 xlabel("Date")
 
 savefig("nifty_1000d.png")
