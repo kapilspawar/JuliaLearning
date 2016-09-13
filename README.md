@@ -19,11 +19,11 @@ Generate trades based on the entries/exits provided by the trading system based 
 
 In MA crossover example, an entry will be taken on a price move above/below the close after the MA Crossover and exit on a high/low after MA crossover in the opposite direction. E.g. Add long position when faster MA crosses the slower MA on the upside and price closes above a previous high. And exit once the faster MA crosses the slower MA on the downside and price closes below a previous low. Also use a stop and reverse strategy. That means short positions will be initiated on closing longs and vice versa.
 
-**Step 4: Trading System Performance Statistics**
+**Step 4: Generate Trading System Performance Statistics**
 
 Calculate the Trading System Performance based on the trades generated. 
 
-To include-
+To include -
 
 a. Total profit, Profitability
 
