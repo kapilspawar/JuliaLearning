@@ -1,7 +1,9 @@
 # JuliaLearning
 Learning to write a simple trading strategy in Julia using Moving Averages Crossover. Ideally the MA Crossover itself should be one of the many indicators that can be provided out-of-the-box. Strategies can then be written on any of the published indicators.
 
-**Step 1: Visualization - Plot Nifty Closing prices along with 20d and 50d SMA.**
+**Step 1: Visualization of the price action**
+
+Plot Nifty Closing prices along with 20d and 50d SMA.
 ![Nifty Spot](https://github.com/kapilspawar/JuliaLearning/blob/master/images/nifty_1000d.png?raw=true "Nifty Spot")
 
 **Step 2: Trade Generation**
